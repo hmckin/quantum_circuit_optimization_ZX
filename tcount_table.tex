@@ -1,0 +1,18 @@
+\begin{table}[t]
+  \centering
+  \caption{T-count before and after rewriting with PyZX \texttt{full\_reduce} followed by \texttt{extract\_circuit}. All circuits are transpiled to the Clifford+$T$ basis; every row was verified equal to the original circuit.}
+  \label{tab:tcount}
+  \small
+  \begin{tabular}{llrrrrr}
+    \toprule
+    Circuit & Family & Qubits & \multicolumn{2}{c}{T-count} & & Reduction \\
+            &        &        & before & after & $\Delta$ & (\%) \\
+    \midrule
+    CDKMRippleCarryAdder(3) & adder & 8 & 42 & 24 & 18 & 42.9 \\
+    CDKMRippleCarryAdder(4) & adder & 10 & 56 & 32 & 24 & 42.9 \\
+    VBERippleCarryAdder(3) & adder & 10 & 70 & 24 & 46 & 65.7 \\
+    WeightedAdder(3) & adder & 6 & 63 & 35 & 28 & 44.4 \\
+    GroverOperator(3) & search & 3 & 14 & 8 & 6 & 42.9 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
