@@ -10,6 +10,7 @@ env/
 
 # Generated output
 out/
+*.tex
 
 # Distribution / packaging
 build/
